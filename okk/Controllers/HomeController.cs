@@ -60,6 +60,13 @@ namespace okk.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult SaveProduct(Ñlothing element)
+        {
+            clothes.Add(element);
+            return RedirectToAction("AdminPanel");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
