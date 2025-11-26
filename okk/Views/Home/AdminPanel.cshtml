@@ -29,6 +29,7 @@
                 <td>@i.Brand</td>
                 <td>
                     <a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@i.Id">Delete</a>
+                    <a class="btn btn-dark" asp-controller="Home" asp-action="Details" asp-route-id="@i.Id">View</a>
                 </td>
             </tr>
         }
