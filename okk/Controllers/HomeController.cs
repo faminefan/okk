@@ -68,7 +68,7 @@ namespace okk.Controllers
         }
         public IActionResult Details()
         {
-            return View();
+            return View(clothes[0]);
         }
 
 
