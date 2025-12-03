@@ -66,9 +66,10 @@ namespace okk.Controllers
             clothes.Add(element);
             return RedirectToAction("AdminPanel");
         }
-        public IActionResult Details()
+        public IActionResult Details(int id)
         {
-            return View(clothes[0]);
+            var item = clothes.FirstOrDefault(x => x.Id == id);
+            return View(item);    
         }
 
 
