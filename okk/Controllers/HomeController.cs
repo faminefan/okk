@@ -22,7 +22,7 @@ namespace okk.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(clothes);
         }
 
         public IActionResult Privacy()
