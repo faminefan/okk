@@ -22,6 +22,7 @@ namespace okk.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Favid = HttpContext.Session.GetInt32("FavoriteProductId");
             return View(clothes);
         }
 
@@ -53,6 +54,11 @@ namespace okk.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+        public IActionResult AddFavorite(int id)
+        {
+            HttpContext.Session.SetInt32("FavoriteProductId", id);
+            return RedirectToAction("Index");
         }
 
         [HttpPost]

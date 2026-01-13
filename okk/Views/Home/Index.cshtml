@@ -11,7 +11,15 @@
                     <p class="card-text">@i.Price @i.Material @i.Size @i.Brand</p>
                 </div>
                 <div class="card-footer">
-                    <button type="button" class="btn btn-outline-dark">favorite</button>
+                    @if(ViewBag.FavId == @i.Id)
+                    {
+                        <button type="button" class="btn btn-outline-warning">favorite</button>
+                    }
+                    else
+                    {
+                        <a asp-action="AddFavorite" asp-route-id="@i.Id" class="btn btn-primary">Favorite</a>
+                    }
+                    <button type="button" class="btn btn-success">add to card</button>
                     <small class="text-body-secondary">Last updated 3 mins ago</small>
                 </div>
             </div>
