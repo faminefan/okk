@@ -7,9 +7,9 @@ namespace okk
     {
         static List<Order> orders = new()
         {
-            new Order { Id = 1, Name = "Electroniucs" },
-            new Order { Id = 2, Name = "Sport" },
-            new Order { Id = 3, Name = "Food & Drinks" },
+            new Order { Id = 1, Client = "baran" , Date = "20.10.2026" , TotalPrice = 1000  },
+            new Order { Id = 2, Client = "dubil" , Date = "15.6.2026" , TotalPrice = 3010  },
+            new Order { Id = 3, Client = "idiot" , Date = "5.1.2027" , TotalPrice = 28956  },
         };
 
         public IActionResult Index()

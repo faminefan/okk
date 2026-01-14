@@ -1,5 +1,5 @@
 ﻿@model List<Order>
-<h1>Category Admin Panel</h1>
+<h1>Orders Admin Panel</h1>
 
 <a class="btn btn-primary" asp-action="Create">Create Ordery</a>
 
@@ -7,7 +7,9 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Name</th>
+            <th scope="col">Client</th>
+            <th scope="col">Date</th>
+            <th scope="col">Total Price</th>
             <th scope="col">Actions</th>
         </tr>
     </thead>
@@ -16,7 +18,9 @@
         {
             <tr>
                 <th scope="row">@i.Id</th>
-                <td>@i.Name</td>
+                <td>@i.Client</td>
+                <td>@i.Date</td>
+                <td>@i.TotalPrice</td>
                 <td>
                     <a class="btn btn-info" asp-action="Edit" asp-route-id="@i.Id">Edit</a>
                     <a class="btn btn-danger" asp-action="Delete" asp-route-id="@i.Id">Delete</a>
